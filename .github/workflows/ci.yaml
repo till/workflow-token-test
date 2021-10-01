@@ -1,0 +1,11 @@
+---
+name: ci
+
+on:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/user
